@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import Board from './components/Board/Board';
-import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import ScoreBoard from './components/ScoreBoard/ScoreBoard';
 
@@ -52,7 +51,7 @@ const App = () => {
 
   const handleClick = square => {
     let newSquares = [... squares];
-    newSquares.splice(square, 1, turn);
+    newSquares.splice(square,1,turn);
     setSquares(newSquares);
     checkForWinner(newSquares);
 
@@ -77,7 +76,6 @@ const App = () => {
         <Board winningSquares={winningSquares} turn={turn} squares={squares} onClick={handleClick}/>
         <ScoreBoard scoreO={score.O} scoreX={score.X}/>
       </div>
-      {/* <Footer/> */}
     </div>
   );
 }
