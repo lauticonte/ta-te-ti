@@ -50,7 +50,7 @@ const App = () => {
   }
 
   const handleClick = square => {
-    let newSquares = [... squares];
+    let newSquares = [...squares];
     newSquares.splice(square,1,turn);
     setSquares(newSquares);
     checkForWinner(newSquares);
